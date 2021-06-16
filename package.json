@@ -23,12 +23,15 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "rm": "nx g @nrwl/workspace:remove"
   },
   "private": true,
   "dependencies": {
+    "@nrwl/next": "12.3.6",
     "core-js": "^3.6.5",
     "document-register-element": "1.13.1",
+    "next": "10.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "regenerator-runtime": "0.13.7",
@@ -44,6 +47,7 @@
     "@nrwl/eslint-plugin-nx": "12.3.6",
     "@nrwl/jest": "12.3.6",
     "@nrwl/linter": "12.3.6",
+    "@nrwl/next": "^12.3.6",
     "@nrwl/react": "12.3.6",
     "@nrwl/tao": "12.3.6",
     "@nrwl/web": "12.3.6",

@@ -19,12 +19,12 @@
     }
   },
   "projects": {
-    "vercel": {
+    "vercel-deploy": {
       "tags": []
     },
-    "vercel-e2e": {
+    "vercel-deploy-e2e": {
       "tags": [],
-      "implicitDependencies": ["vercel"]
+      "implicitDependencies": ["vercel-deploy"]
     }
   }
 }

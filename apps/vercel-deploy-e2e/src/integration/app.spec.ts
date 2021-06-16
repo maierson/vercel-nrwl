@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('vercel', () => {
+describe('vercel-deploy', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('vercel', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to vercel!');
+    getGreeting().contains('Welcome to vercel-deploy!');
   });
 });
