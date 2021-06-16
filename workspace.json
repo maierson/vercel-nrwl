@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "defaultProject": "vercel",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "strict": true,
+        "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint",
+        "strict": true
+      }
+    }
+  },
+  "projects": {
+    "vercel": {
+      "root": "apps/vercel",
+      "sourceRoot": "apps/vercel/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/vercel",
+            "index": "apps/vercel/src/index.html",
+            "main": "apps/vercel/src/main.tsx",
+            "polyfills": "apps/vercel/src/polyfills.ts",
+            "tsConfig": "apps/vercel/tsconfig.app.json",
+            "assets": ["apps/vercel/src/favicon.ico", "apps/vercel/src/assets"],
+            "styles": ["apps/vercel/src/styles.css"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/vercel/src/environments/environment.ts",
+                  "with": "apps/vercel/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "vercel:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "vercel:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/vercel/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/vercel"],
+          "options": {
+            "jestConfig": "apps/vercel/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "vercel-e2e": {
+      "root": "apps/vercel-e2e",
+      "sourceRoot": "apps/vercel-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/vercel-e2e/cypress.json",
+            "tsConfig": "apps/vercel-e2e/tsconfig.e2e.json",
+            "devServerTarget": "vercel:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "vercel:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/vercel-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  }
+}
