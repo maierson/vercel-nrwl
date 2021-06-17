@@ -1,6 +1,6 @@
  [build]
   base = "/"
-  command =  "yarn vercel-deploy:build"
+  command =  "yarn build vercel-deploy"
   publish = "/dist/apps/vercel-deploy"
 
  [[plugins]]
