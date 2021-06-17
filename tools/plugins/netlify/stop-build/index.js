@@ -9,6 +9,6 @@ module.exports = {
     const currentProject = process.env.PROJECT_NAME;
     console.log('--- Build End ---\n');
     console.log('Project Name:', currentProject);
-    console.log('Dirs:', fs.readdirSync(process.cwd()));
+    console.log('Dirs:', fs.readdirSync(`${process.cwd()}/dist"));
   },
 };

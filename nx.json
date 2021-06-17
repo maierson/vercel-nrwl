@@ -1,9 +1,5 @@
 {
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
     ".eslintrc.json": "*"
   },
   "affected": {
