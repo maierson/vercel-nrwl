@@ -1,2 +1,7 @@
+ [build]
+  base = "/"
+  command =  "yarn vercel-deploy:build"
+  publish = "/dist/apps/vercel-deploy"
+
  [[plugins]]
  package = "./tools/plugins/netlify/stop-build"
