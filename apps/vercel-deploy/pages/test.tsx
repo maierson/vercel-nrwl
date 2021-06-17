@@ -15,9 +15,13 @@ export const getServerSideProps = async ({
   params,
   query,
 }: GetServerSidePropsContext) => {
+  const url =
+    'https://firestore.googleapis.com/v1/projects/nrwl-test/databases/(default)/documents/cities/LA';
+  const result = await global.fetch(url).then((res) => res.json());
+
   return {
     props: {
-      value: 'in the page',
+      value: JSON.stringify(result, null, 2),
     },
   };
 };
