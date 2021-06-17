@@ -13,6 +13,9 @@ export function Index() {
       <Link href="/test">
         <button className="main-button">Test</button>
       </Link>
+      <Link href="/best">
+        <button className="main-button">Best</button>
+      </Link>
     </div>
   );
 }

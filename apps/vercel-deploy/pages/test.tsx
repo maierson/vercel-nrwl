@@ -6,7 +6,15 @@ export const Test = ({ value }) => {
     <div>
       <div>Test Page</div>
       <Link href="/">Back</Link>
-      <div style={{ marginTop: '40px' }}>{value}</div>
+      <pre
+        style={{
+          marginTop: '40px',
+          backgroundColor: 'transparent',
+          color: 'gray',
+        }}
+      >
+        {value}
+      </pre>
     </div>
   );
 };
