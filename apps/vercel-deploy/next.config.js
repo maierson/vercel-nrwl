@@ -8,4 +8,5 @@ module.exports = withNx({
     svgr: true,
   },
   target: 'serverless',
+  distDir: 'dist/apps/vercel-deploy/.next',
 });
