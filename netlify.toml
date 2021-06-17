@@ -1,6 +1,7 @@
  [build]
   base = "/"
   command =  "yarn build vercel-deploy"
+  functions = "netlify/functions"
   publish = "/dist/apps/vercel-deploy"
 
  [[plugins]]
