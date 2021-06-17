@@ -10,11 +10,18 @@ module.exports = {
     const currentProject = process.env.PROJECT_NAME;
     console.log('--- Build End ---\n');
     console.log('Project Name:', currentProject);
-    console.log('Dirs:', fs.readdirSync(`${process.cwd()}/dist`));
-    console.log('Dirs:', fs.readdirSync(`${process.cwd()}/dist/apps`));
+    console.log('Dirs dist:', fs.readdirSync(`${process.cwd()}/dist`));
     console.log(
-      'Dirs:',
+      'Dirs: dist/apps',
+      fs.readdirSync(`${process.cwd()}/dist/apps`)
+    );
+    console.log(
+      'Dirs dist/app/vercel-deploy:',
       fs.readdirSync(`${process.cwd()}/dist/apps/vercel-deploy`)
+    );
+    console.log(
+      'Dirs dist/app/vercel-deploy/.next:',
+      fs.readdirSync(`${process.cwd()}/dist/apps/vercel-deploy/.next`)
     );
   },
 };
