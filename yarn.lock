@@ -1585,10 +1585,17 @@
     node-gyp "^7.1.0"
     read-package-json-fast "^2.0.1"
 
+<<<<<<< HEAD
 "@nrwl/cli@12.4.0":
   version "12.4.0"
   resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-12.4.0.tgz#d313ddbabfef0d4b1b3e799dac5fa1dafe4819d4"
   integrity sha512-ZU1NAjxEa9iMRRhUCYmD0ZLlK1j5l+zDseDE1a0A3KdgMVGh2eOchREnf6R75skQJHl4v9hKFweqiy0Xl14ZRQ==
+=======
+"@nrwl/cli@12.3.6", "@nrwl/cli@^12.3.6":
+  version "12.3.6"
+  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-12.3.6.tgz#72718eb6f99808ee1bba047643e7cd09b1e346f4"
+  integrity sha512-BGUgWuU3qOah7DLoi/QGBFfrVpWG1uYyPTQGfUIbAhS1yjburQOXFvEYvudB9L82usng/+bEiAVjx0XOelic/w==
+>>>>>>> 855e14374fb432c1b447868655b3d09922c455ab
   dependencies:
     "@nrwl/tao" "12.4.0"
     chalk "4.1.0"
