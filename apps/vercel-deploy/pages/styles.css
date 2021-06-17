@@ -20,8 +20,9 @@
 }
 
 .app header {
-  background-color: #143055;
-  color: white;
+  /* background-color: #143055; */
+  /* color: white; */
+  color: black;
   padding: 5px;
   border-radius: 3px;
 }
@@ -125,4 +126,8 @@
   height: 16px;
   width: 16px;
   margin-right: 4px;
+}
+
+.main-button {
+  padding: 5px 20px;
 }

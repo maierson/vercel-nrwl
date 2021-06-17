@@ -1,19 +1,17 @@
-import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ReactComponent as NxLogo } from '../public/nx-logo-white.svg';
+import React from 'react';
 import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to vercel-deploy!</title>
+        <title>Vercel Deploy</title>
       </Head>
       <div className="app">
-        <header className="flex">
-          <NxLogo width="75" height="50" />
-          <h1>Welcome to vercel-deploy!</h1>
+        <header className="flex" style={{ fontSize: '40px' }}>
+          Intro
         </header>
         <main>
           <Component {...pageProps} />
