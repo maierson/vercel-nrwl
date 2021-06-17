@@ -6,7 +6,7 @@
     "nx": "nx",
     "start": "nx serve",
     "build": "nx build",
-    "build:vercel": "npm --prefix vercel-deploy run build",
+    "build:vercel-deploy": "npm --prefix vercel-deploy run build",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
