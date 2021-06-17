@@ -25,6 +25,9 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
+    "migrate:run": "nx migrate --run-migrations",
+    "migrate:nx": "nx migrate @nrwl/workspace@latest",
+    "migrate": "yarn migrate:nx && yarn migrate:run",
     "rm": "nx g @nrwl/workspace:remove"
   },
   "private": true,
