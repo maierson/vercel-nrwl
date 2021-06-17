@@ -11,5 +11,10 @@ module.exports = {
     console.log('--- Build End ---\n');
     console.log('Project Name:', currentProject);
     console.log('Dirs:', fs.readdirSync(`${process.cwd()}/dist`));
+    console.log('Dirs:', fs.readdirSync(`${process.cwd()}/dist/apps`));
+    console.log(
+      'Dirs:',
+      fs.readdirSync(`${process.cwd()}/dist/apps/vercel-deploy`)
+    );
   },
 };
